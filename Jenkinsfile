@@ -23,7 +23,7 @@ sh 'node ./frontend/test.js'
 }
 }
 }
-}
+
 stage('Deploy') {
 when {
 expression { env.GIT_BRANCH == 'origin/main' }
@@ -34,6 +34,7 @@ message 'Deploy the application?'
 }
 steps {
 echo 'Deploying...'
+}
 }
 }
 }
